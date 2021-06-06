@@ -102,8 +102,8 @@ let tooltiptext = document.createTextNode('For more "game-time" feeling, you can
 // so the user has the choice if he wants to hear some game sound
 audio.setAttribute('controls', true);
 audio.setAttribute('loop', true);
-headerLogo.src = '../assets/img/quiz-logo.png';
-quizAudio.src = '../assets/audio/audio.m4a';
+headerLogo.src = 'assets/img/quiz-logo.png';
+quizAudio.src = 'assets/audio/audio.m4a';
 
 
 
