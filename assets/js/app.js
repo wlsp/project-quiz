@@ -51,7 +51,7 @@ let data = [
 
     {
         url: "https://cdn.playbuzz.com/cdn//f063e8fe-ad57-485e-8211-ed2ee0d9a205/866f119d-e5e2-45ca-846c-b6d10a59d1e4.jpg",
-        question: "Which is the smallest country, measured ™by total land area?",
+        question: "Which is the smallest country, measured by total land area?",
         choice: ["Maldives", "Monaco", "Vatican"],
         answer: "Vatican"
     },
