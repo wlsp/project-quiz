@@ -74,7 +74,7 @@ let data = [
 
 
 // It a JS-Project, so I wanted to "flex" and show my "new-Skills"
-document.querySelector('body').style.backgroundImage =  'jassets/img/quizbg.png';
+document.querySelector('body').style.backgroundImage =  'assets/img/quizbg.png';
 document.querySelector('body').style.backgroundSize = "50%";
 document.querySelector('body').style.backgroundRepeat = "repeat";
 
