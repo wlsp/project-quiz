@@ -74,7 +74,7 @@ let data = [
 
 
 // It a JS-Project, so I wanted to "flex" and show my "new-Skills"
-document.querySelector('body').style.backgroundImage = "url(assets/img/quizbg.png)";
+document.querySelector('body').style.backgroundImage =  'assets/img/quizbg.png';
 document.querySelector('body').style.backgroundSize = "50%";
 document.querySelector('body').style.backgroundRepeat = "repeat";
 
@@ -164,16 +164,16 @@ data.forEach((element) => {
 
 // Trying to put some spice for the wring answer. But the confetti-canon will not work :( 
 // tried to return the function an insert to the "if" but still not working..s
-function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
+// function randomInRange(min, max) {
+//     return Math.random() * (max - min) + min;
+// }
 
-confetti({
-    angle: randomInRange(55, 125),
-    spread: randomInRange(50, 70),
-    particleCount: randomInRange(50, 100),
-    origin: { y: 0.6 }
-});
+// confetti({
+//     angle: randomInRange(55, 125),
+//     spread: randomInRange(50, 70),
+//     particleCount: randomInRange(50, 100),
+//     origin: { y: 0.6 }
+// });
 
 
 
