@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/* font-family: 'Quicksand', sans-serif; */
+* {
+  margin: 0; padding: 0;
+}
+#hero {
+  display: flex; justify-content: center;
+  text-align: center;  font-family: "Quicksand", sans-serif;  font-size: 1.4rem;
+}
+#container {
+  width: 73%;  background-color: #ffffffa9;
+  border: 1px solid #000;
+}
+#header {
+  position: relative;
+}
+#headerLogo {
+  width: 45%;
+}
+img:not(#headerLogo) {
+  border: 0.2rem solid black;
+  padding: 0.4rem;
+}
+button {
+  margin: 3%; min-width: 15%; padding: 2%; text-transform: uppercase;
+  letter-spacing: 1px; font-size: 1.2rem; outline: none;
+  position: relative;  transition: all 0.3s;
+  border: none; transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+button:hover {
+  border: 1px solid #696969; box-shadow: 0 0.5em 0.5em -0.4em #555555;
+  transform: translateY(-0.25em); cursor: pointer;
+}
+.correct {
+  background-color: green;
+  animation: bounce .3s infinite alternate;
+}
+@keyframes bounce {
+        to { -webkit-transform: scale(1.1); }
+}
+.wrong {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0); background-color: red;
+}
+@keyframes shake {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+audio {
+  display: block;
+  margin: 0 auto;
+}
+.tooltiptext {
+  visibility: hidden;  width: 18vw; height: 8vh;
+  background-color: black; color: #fff;
+  font-size: 1rem; text-align: center;
+  border-radius: 6px; padding: 5px 0;
+  position: absolute; top: 70%;
+  right: 38%; z-index: 1;
+}
+#header:hover .tooltiptext {
+  visibility: visible;
+}
