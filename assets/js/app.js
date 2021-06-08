@@ -90,13 +90,13 @@ let headerLogo = document.createElement('img');
 let audio = document.createElement('audio');
 let quizAudio = document.createElement('source');
 let tooltip = document.createElement('span');
+let clock1 = document.createElement('div');
+let count = document.createElement('div');
 
 
 
 // Using a tooltip for the gamer 
 let tooltiptext = document.createTextNode('For more "game-time" feeling, you can play some audio if you like');
-
-
 
 // For more "game-time" feeling unsing some audio and with controls and a loop for a better UX, 
 // so the user has the choice if he wants to hear some game sound
@@ -115,6 +115,8 @@ headerLogo.id = 'headerLogo';
 contentWrap.className = 'contentWrap';
 tooltip.className = 'tooltiptext';
 audio.id = 'myAudio';
+clock1.id = 'clock1';
+count.id = 'count';
 
 
 
@@ -127,7 +129,8 @@ header.appendChild(audio);
 audio.appendChild(quizAudio);
 header.appendChild(tooltip);
 tooltip.appendChild(tooltiptext);
-
+container.appendChild(clock1);
+clock1.appendChild(count);
 
 
 // Game function: using forEach for the data
@@ -163,7 +166,7 @@ data.forEach((element) => {
 
 
 // Trying to put some spice for the wring answer. But the confetti-canon will not work :( 
-// tried to return the function an insert to the "if" but still not working..s
+// tried to return the function an insert to the "if" but still not working...
 // function randomInRange(min, max) {
 //     return Math.random() * (max - min) + min;
 // }
@@ -175,5 +178,35 @@ data.forEach((element) => {
 //     origin: { y: 0.6 }
 // });
 
+let counting = 45;
 
+const countdown = setInterval(() => {
+    counting--;
+    if (counting == 30) {
+        clock1.style.backgroundColor = "orange";
+        clock1.style.transition = "all .8s";
+    }
+    if (counting == 15) {
+        clock1.style.backgroundColor = "red";
+        clock1.style.transition = "all .8s";
+    }
+    if (counting == 10) {
+        clock1.style.backgroundColor = "red";
+        clock1.style.transition = "all .8s";
+        clock1.classList.add('blink_me');
+    }
+    if (counting < 0) {
+        clearInterval(countdown);
+        document.getElementById('container').innerHTML = `
+        <h1 id="message">Sorry, you time ran out!</h1>
+        <button id="btn" onclick="reload()">Revanche? &#8635;</button>`;
+    } else {
+        document.getElementById('count').innerHTML = counting;
+    } 
+}, 1000);
 
+window.onload = countdown;
+
+reload = () => {
+    location.reload();
+}
